@@ -1,60 +1,119 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Estilos Gerais */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
-    padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que o corpo ocupe toda a altura da janela */
 }
 
 header {
-    text-align: center;
-    padding: 20px;
-    background-color: #4CAF50;
-    color: #fff;
+  background-color: #2d87f0;
+  color: #fff;
+  padding: 15px 0; /* Aumenta o espaçamento vertical */
+  text-align: center;
 }
 
 header h1 {
-    font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-main {
-    max-width: 800px;
-    margin: 20px auto;
+/* Estilos do Menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center; /* Centraliza o menu */
+  margin: 10px 0;
 }
 
-section {
-    background: #fff;
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+nav ul li {
+  display: inline-block; /* Troca para inline-block para controle de espaço */
+  margin-right: 15px;
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* Remove o espaçamento à direita do último item */
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #1a5fbf;
+  color: #fff;
+  border-radius: 5px; /* Adiciona cantos arredondados ao hover */
 }
 
 h2 {
-    color: #4CAF50;
-    margin-bottom: 10px;
+  color: #0000FF;
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center; /* Centraliza os títulos */
 }
 
-h3 {
-    margin-top: 10px;
-    color: #4CAF50;
+p {
+  margin-bottom: 20px;
+  line-height: 1.8;
 }
 
-ul, p {
-    margin: 10px 0;
+img {
+  margin: 20px 0;
+  max-width: 100%; /* Garante que a imagem se ajuste ao tamanho da tela */
+  height: auto;
 }
 
-strong {
-    color: #4CAF50;
+/* Seções */
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+  flex: 1; /* Faz as seções ocuparem o espaço disponível */
 }
 
-ul li {
-    margin-left: 20px;
-    list-style-type: disc;
+section img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilo para imagens na seção #localizacao */
+#localizacao .image {
+  display: flex; /* Exibe as imagens lado a lado */
+  gap: 50px; /* Aumentei o espaçamento entre as imagens */
+  justify-content: center; /* Centraliza as imagens */
+  flex-wrap: wrap; /* Permite que as imagens pulem para a linha seguinte se não houver espaço suficiente */
+  margin-top: 20px; /* Adiciona espaço acima das imagens */
+}
+
+.image-item {
+  width: 250px; /* Aumentei o tamanho da largura */
+  height: 250px; /* Aumentei o tamanho da altura */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+  transition: transform 0.3s ease; /* Transição suave para efeitos */
+}
+
+/* Efeito de hover para as imagens */
+.image-item:hover {
+  transform: scale(1.1); /* Aumenta levemente o tamanho da imagem ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0; /* Aumenta o espaçamento do rodapé */
+  width: 100%;
+  margin-top: auto; /* Empurra o rodapé para o final */
+  font-size: 14px; /* Define o tamanho da fonte */
+}
+
+footer p {
+  margin: 0; /* Remove margens extras */
 }
