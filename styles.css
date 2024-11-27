@@ -6,13 +6,13 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Garante que o corpo ocupe toda a altura da janela */
+  min-height: 100vh;
 }
 
 header {
   background-color: #2d87f0;
   color: #fff;
-  padding: 15px 0; /* Aumenta o espaçamento vertical */
+  padding: 15px 0;
   text-align: center;
 }
 
@@ -24,17 +24,17 @@ header h1 {
 nav ul {
   list-style-type: none;
   padding: 0;
-  text-align: center; /* Centraliza o menu */
+  text-align: center;
   margin: 10px 0;
 }
 
 nav ul li {
-  display: inline-block; /* Troca para inline-block para controle de espaço */
+  display: inline-block;
   margin-right: 15px;
 }
 
 nav ul li:last-child {
-  margin-right: 0; /* Remove o espaçamento à direita do último item */
+  margin-right: 0;
 }
 
 nav ul li a {
@@ -48,7 +48,20 @@ nav ul li a {
 nav ul li a:hover {
   background-color: #1a5fbf;
   color: #fff;
-  border-radius: 5px; /* Adiciona cantos arredondados ao hover */
+  border-radius: 5px;
+}
+
+/* Estilo Responsivo para o Menu */
+@media (max-width: 768px) {
+  nav ul {
+    padding: 0;
+    text-align: left;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 5px 0;
+  }
 }
 
 h2 {
@@ -56,7 +69,7 @@ h2 {
   font-size: 24px;
   margin-top: 30px;
   margin-bottom: 20px;
-  text-align: center; /* Centraliza os títulos */
+  text-align: center;
 }
 
 p {
@@ -66,7 +79,7 @@ p {
 
 img {
   margin: 20px 0;
-  max-width: 100%; /* Garante que a imagem se ajuste ao tamanho da tela */
+  max-width: 100%;
   height: auto;
 }
 
@@ -74,7 +87,7 @@ img {
 section {
   padding: 20px;
   margin-bottom: 20px;
-  flex: 1; /* Faz as seções ocuparem o espaço disponível */
+  flex: 1;
 }
 
 section img {
@@ -84,23 +97,22 @@ section img {
 
 /* Estilo para imagens na seção #localizacao */
 #localizacao .image {
-  display: flex; /* Exibe as imagens lado a lado */
-  gap: 50px; /* Aumentei o espaçamento entre as imagens */
-  justify-content: center; /* Centraliza as imagens */
-  flex-wrap: wrap; /* Permite que as imagens pulem para a linha seguinte se não houver espaço suficiente */
-  margin-top: 20px; /* Adiciona espaço acima das imagens */
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .image-item {
-  width: 250px; /* Aumentei o tamanho da largura */
-  height: 250px; /* Aumentei o tamanho da altura */
-  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
-  transition: transform 0.3s ease; /* Transição suave para efeitos */
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-/* Efeito de hover para as imagens */
 .image-item:hover {
-  transform: scale(1.1); /* Aumenta levemente o tamanho da imagem ao passar o mouse */
+  transform: scale(1.1);
 }
 
 /* Rodapé */
@@ -108,12 +120,47 @@ footer {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 15px 0; /* Aumenta o espaçamento do rodapé */
+  padding: 15px 0;
   width: 100%;
-  margin-top: auto; /* Empurra o rodapé para o final */
-  font-size: 14px; /* Define o tamanho da fonte */
+  margin-top: auto;
+  font-size: 14px;
 }
 
 footer p {
-  margin: 0; /* Remove margens extras */
+  margin: 0;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  .image-item {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  nav ul {
+    text-align: center;
+  }
+
+  .image-item {
+    width: 150px;
+    height: 150px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
 }
